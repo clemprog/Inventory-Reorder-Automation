@@ -1,0 +1,26 @@
+{
+  "name": "Inventory Reorder Automation",
+  "description": "Automatically detects low-stock items and sends reorder notifications to suppliers.",
+  "nodes": [
+    {
+      "name": "Daily Cron Trigger",
+      "type": "Cron"
+    },
+    {
+      "name": "Get Inventory Data",
+      "type": "Google Sheets"
+    },
+    {
+      "name": "Filter Low Stock",
+      "type": "Function"
+    },
+    {
+      "name": "Send Email",
+      "type": "SMTP"
+    },
+    {
+      "name": "Notify Manager",
+      "type": "Slack"
+    }
+  ]
+}
